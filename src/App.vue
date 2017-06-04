@@ -315,6 +315,6 @@ Lösungen und Fehlerbehebung.</div>
   h3
     margin-bottom: 5px !important
     color: green
-  #berufe
+
 
 </style>
