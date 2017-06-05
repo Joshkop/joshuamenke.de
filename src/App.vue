@@ -14,7 +14,7 @@
         <a href="/" class="centered">
           <span class="before" :style="{background: compBasecolor.darken(0.3).string()}"></span>
           <h1>Joshua Menke</h1>
-          <img class="ui small image centered" src="./assets/profile.png" alt="Joshua Menke" width="150px" height="200px">
+          <!--<img class="ui small image centered" src="./assets/profile.png" alt="Joshua Menke" width="150px" height="200px">-->
         </a>
 
 
@@ -103,7 +103,6 @@
             <rating :count=3 iconname="linux" :color="compBasecolor"></rating>
           </div>
         </div>
-        <div class="page-break"></div>
         <div class="segment" id="hobbies">
           <div class="subtitle">
             <div class="ui divider"></div>
@@ -114,6 +113,7 @@
           <div class="info"><b>Elektronische Musik</b></div>
           <div class="info"><b>Kochen</b></div>
         </div>
+        <div class="page-break"></div>
 
         <div class="segment" id="links">
           <div>
@@ -246,10 +246,10 @@
             subtitle: "Hellwegschule, Bochum",
             time: "02/2010 - 05/2014",
             text: `Prüfungsfächer:
-                    <ul>
+                    <ul class="colto">
                     <li>Sozialwissenschaften LK</li>
-                    <li>Mathe LK</li>
                     <li>Englisch GK</li>
+                    <li>Mathe LK</li>
                     <li>Technik GK mündlich</li>
 </ul>Abschlussnote: 2,8`
           },
@@ -328,6 +328,10 @@
 </script>
 
 <style lang="sass">
+  .colto
+    columns: 2px 2
+    list-style-position: inside
+
   #content
     display: flex
     justify-content: center
@@ -373,13 +377,14 @@
         display: none
     h1
       margin-top: 0
+      text-align: left
     i.circular.icon
       background: #eee
     a
       &.centered
         position: relative
         color: #fff !important
-        padding-bottom: 15px
+        padding-bottom: 0
         display: block
         width: 100%
         margin-bottom: 30px
@@ -460,10 +465,12 @@
       position: relative
     #app > *:not(#content)
       display: none
-    #hobbies
+    #links
       padding-top: 5px
     #left
       width: 50%
+    .colto
+      font-size: 0.9em
 
 </style>
 
