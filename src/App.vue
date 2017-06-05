@@ -451,6 +451,8 @@
       flex-direction: column
       #left, #right
         width: 100%
+    .colto
+      columns: auto 1
   @media print
     #content
       padding: 0
