@@ -3,6 +3,7 @@
     <i class="exchange circular icon" v-on:click="right = !right"></i>
     <icon name="color" v-bind:style="{color: compBasecolor.string()}" scale="4" id="colorpicker"
           @click.native="picker = !picker"></icon>
+    <i class="erase circular icon" @click="setBaseColor()"></i>
     <div id="slider" v-if="picker">
       <slider-picker v-model="color"></slider-picker>
     </div>
@@ -13,7 +14,7 @@
         <a href="/" class="centered">
           <span class="before" :style="{background: compBasecolor.darken(0.3).string()}"></span>
           <h1>Joshua Menke</h1>
-          <img class="ui small image centered" src="https://unsplash.it/200" alt="Joshua Menke" width="200px" height="200px">
+          <img class="ui small image centered" src="./assets/profile.png" alt="Joshua Menke" width="150px" height="200px">
         </a>
 
 
@@ -194,35 +195,42 @@
             title: "Programmierer und Datenerfasser",
             subtitle: "Fachverlag für Verbraucherinformationen",
             time: "08/2015 - 01/2017",
-            text: "Sammeln und bearbeiten von Daten sowie die Programmierung von Datenverarbeitungsskripts und Eingabeoberflächen."
+            text: "Programmierung von Datenverarbeitungsskripts, Crawlern zur Datensammlung und weiteren Automatisierungshilfen. Des Weiteren die Entwicklung einer umfangreichen Eingabemaske für Produktdaten mit automatischer Datensammlung von Amazon und Weiterverarbeitung zu importfähigen CSV Dateien."
           },
           {
-            id: 2,
-            title: "Technik AG",
-            subtitle: "Grundschule Bochum Westenfeld",
-            time: "04/2013 - 02/2014",
-            text: "Mitleitung der Technik AG, in der Grundschülern die Welt der Technik näher gebracht werden soll. Dabei unterrichte Ich mit einem weiteren Schüler diese Grundschüler und lies diese Experimente unter unserer Beobachtung und Leitung durchführen."
+            id: 1,
+            title: "Imbissverkäufer",
+            subtitle: "Bratwursthaus GmbH & Co. KG",
+            time: "08/2015 - 01/2017",
+            text: "Verkauf und Zubereitung von Imbissspeisen im Bratwursthaus direkt im Bermuda3eck in Bochum."
           },
           {
             id: 3,
-            title: "Verkäufer",
-            subtitle: "Edmund Goebgens Stadion- und Veranstaltungsservice GmbH",
-            time: "03/2012 - 06/2012",
-            text: "Verkauf von Lebensmitteln, vor allem Eis und Bier, in Stadien wie der Veltins Arena in Gelsenkirchen oder Lanxess Arena in Köln. Dabei verkaufte ich hauptsächlich in den Sitzplatzreihen mit Bauchladen."
+            title: "Aufseher",
+            subtitle: "Grundschule Bochum Westenfeld",
+            time: "04/2013 - 02/2014",
+            text: "Mitleitung der Technik AG, in der Grundschülern die Welt der Technik näher gebracht werden soll. Dabei vor allem Helfen beim Durchführen von Experimenten, Erklären auftretender naturwissenschaftlicher Phänomene und Aufpassen auf die Schüler."
           },
           {
             id: 4,
-            title: "Praktikum im Bereich IT",
-            subtitle: "Faber Datentechnik",
-            time: "11/2011 - 11/2011",
-            text: "Praktikum vom 07.11 – 18.11.11 im Bereich IT. Dabei vor allem Einführung in die Welt der Hardware und Montage von Computern."
+            title: "Eis- & Bierverkäufer",
+            subtitle: "Edmund Goebgens Stadion- und Veranstaltungsservice GmbH",
+            time: "03/2012 - 06/2012",
+            text: "Verkauf von Eis und Bier in Stadien wie der Veltins Arena in Gelsenkirchen oder der Lanxess Arena in Köln. Dabei hauptsächlich im Umgang mit einem Bauchladen zwischen den Sitzreihen."
           },
           {
             id: 5,
             title: "Praktikum im Bereich IT",
+            subtitle: "Faber Datentechnik",
+            time: "11/2011 - 11/2011",
+            text: "Zweiwöchiges Praktikum im Bereich Hardware. Dabei vor allem Montage von Installation von Computern. Dazu auch kleine Reparaturarbeiten und Fehleranalysen."
+          },
+          {
+            id: 6,
+            title: "Praktikum im Bereich IT",
             subtitle: "DOGEWO21, Dortmund",
             time: "02/2010 - 02/2010",
-            text: "Praktikum vom 22.02 – 26.02.10 im Bereich IT. Dabei vor allem Software Lösungen und Fehlerbehebung."
+            text: "Einwöchiges Praktikum im Bereich Software. In erster Linie das Erstellen von Exceltabellen und die Unterstützung des IT-Supports vor Ort."
           },
         ],
         education: [
@@ -237,7 +245,13 @@
             title: "Abitur",
             subtitle: "Hellwegschule, Bochum",
             time: "02/2010 - 05/2014",
-            text: "Abschlussnote: 2,8"
+            text: `Prüfungsfächer:
+                    <ul>
+                    <li>Sozialwissenschaften LK</li>
+                    <li>Mathe LK</li>
+                    <li>Englisch GK</li>
+                    <li>Technik GK mündlich</li>
+</ul>Abschlussnote: 2,8`
           },
           {
             id: 3,
@@ -293,6 +307,19 @@
         elem.style.color = Color(this.color.hex).darken(0.3).string();
         elem.style.borderColor = Color(this.color.hex).darken(0.3).string();
       })
+    },
+    methods: {
+        setBaseColor: function (event) {
+            let c = Color.hsl([120, 33, 34])
+            this.color =  {
+            hex: c.hex(),
+              hsl: c.hsl().object(),
+              hsv: c.hsv().object(),
+              rgba: c.rgb().object(),
+              a: 1
+          }
+
+        }
     }
 
   }
@@ -301,9 +328,6 @@
 </script>
 
 <style lang="sass">
-  $basecolor: hsl(120, 33, 34)
-  $darkerbase: hsl(hue($basecolor), saturation($basecolor)+15, lightness($basecolor)-14)
-  $linkcolor: hsl(hue($basecolor), saturation($basecolor)+42, lightness($basecolor)+27)
   #content
     display: flex
     justify-content: center
@@ -318,7 +342,7 @@
   #colorpicker
     position: fixed
     left: 40px
-    top: 6px
+    top: 5px
 
   #slider
     position: fixed
@@ -329,6 +353,10 @@
     position: fixed
     left: 10px
     top: 10px
+  .erase
+    position: fixed
+    top: 10px
+    left: 80px
 
   #left
     padding: 30px
@@ -346,9 +374,7 @@
     h1
       margin-top: 0
     i.circular.icon
-      border-color: $darkerbase
       background: #eee
-      color: $darkerbase
     a
       &.centered
         position: relative
@@ -409,14 +435,20 @@
     .page-break
       display: none
 
+
+  @media only screen and (max-width : 420px)
+    #app > *:not(#content)
+      display: none
+    #app
+      width: 100%
+    #content
+      padding: 0
+      flex-direction: column
+      #left, #right
+        width: 100%
   @media print
     #content
       padding: 0
-    /*overflow: auto*/
-    /*#bildung*/
-      /*margin-top: 230px*/
-    /*#hobbies*/
-      /*margin-top: 75px*/
     .page-break
       display: block
       page-break-before: always
@@ -430,7 +462,8 @@
       display: none
     #hobbies
       padding-top: 5px
-
+    #left
+      width: 50%
 
 </style>
 

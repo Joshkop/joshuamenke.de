@@ -6,7 +6,7 @@
       <span>{{subtitle}}</span>
       <span style="white-space: nowrap">{{time}}</span>
     </div>
-    <div class="text">{{text}}</div>
+    <div class="text" v-html="text"></div>
   </div>
 </template>
 
