@@ -309,7 +309,7 @@
       })
     },
     methods: {
-        setBaseColor: function (event) {
+        setBaseColor: function () {
             let c = Color.hsl([120, 33, 34])
             this.color =  {
             hex: c.hex(),
@@ -378,6 +378,7 @@
     h1
       margin-top: 0
       text-align: left
+
     i.circular.icon
       background: #eee
     a
@@ -388,9 +389,7 @@
         display: block
         width: 100%
         margin-bottom: 30px
-        img
-          border-radius: 5px
-          box-shadow: 0 8px 6px -6px black
+
         & > *
           position: relative
           z-index: 10
