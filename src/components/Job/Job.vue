@@ -28,6 +28,7 @@ export default {
     margin-bottom: 5px !important
     margin-top: 0 !important
   .job
+    max-width:
     border-left: solid 1px
     padding-bottom: 20px
     padding-left: 10px
@@ -43,6 +44,10 @@ export default {
       box-sizing: content-box
       transform: translate(-50%, 0px)
       margin-left: -1px
+    .bold
+      font-weight: bold
+    .italic
+      font-style: italic
   @media print
     .job .before
       border-color: white

@@ -167,8 +167,8 @@
 
 <script>
   import Color from 'color'
-  import Job from '@/components/Job'
-  import Rating from '@/components/Rating'
+  import Job from '@/components/Job/Job'
+  import Rating from '@/components/Rating/Rating'
   let basecolor = Color.hsl([120, 33, 34])
   let rightBool = true
   export default {
