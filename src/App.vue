@@ -166,19 +166,19 @@
 </template>
 
 <script>
-  import Color  from 'color'
-  import Job from 'components/Job'
-  import Rating from 'components/Rating'
+  import Color from 'color'
+  import Job from '@/components/Job'
+  import Rating from '@/components/Rating'
   let basecolor = Color.hsl([120, 33, 34])
   let rightBool = true
   export default {
     name: 'app',
     components: {
       job: Job,
-      rating: Rating,
+      rating: Rating
     },
 
-    data() {
+    data () {
       return {
         right: rightBool,
         picker: false,
@@ -192,59 +192,59 @@
         jobs: [
           {
             id: 1,
-            title: "Programmierer und Datenerfasser",
-            subtitle: "Fachverlag für Verbraucherinformationen",
-            time: "08/2015 - 01/2017",
-            text: "Programmierung von Datenverarbeitungsskripts, Crawlern zur Datensammlung und weiteren Automatisierungshilfen. Des Weiteren die Entwicklung einer umfangreichen Eingabemaske für Produktdaten mit automatischer Datensammlung von Amazon und Weiterverarbeitung zu importfähigen CSV Dateien."
+            title: 'Programmierer und Datenerfasser',
+            subtitle: 'Fachverlag für Verbraucherinformationen',
+            time: '08/2015 - 01/2017',
+            text: 'Programmierung von Datenverarbeitungsskripts, Crawlern zur Datensammlung und weiteren Automatisierungshilfen. Des Weiteren die Entwicklung einer umfangreichen Eingabemaske für Produktdaten mit automatischer Datensammlung von Amazon und Weiterverarbeitung zu importfähigen CSV Dateien.'
           },
           {
             id: 1,
-            title: "Imbissverkäufer",
-            subtitle: "Bratwursthaus GmbH & Co. KG",
-            time: "08/2015 - 01/2017",
-            text: "Verkauf und Zubereitung von Imbissspeisen im Bratwursthaus direkt im Bermuda3eck in Bochum."
+            title: 'Imbissverkäufer',
+            subtitle: 'Bratwursthaus GmbH & Co. KG',
+            time: '08/2015 - 01/2017',
+            text: 'Verkauf und Zubereitung von Imbissspeisen im Bratwursthaus direkt im Bermuda3eck in Bochum.'
           },
           {
             id: 3,
-            title: "Aufseher",
-            subtitle: "Grundschule Bochum Westenfeld",
-            time: "04/2013 - 02/2014",
-            text: "Mitleitung der Technik AG, in der Grundschülern die Welt der Technik näher gebracht werden soll. Dabei vor allem Helfen beim Durchführen von Experimenten, Erklären auftretender naturwissenschaftlicher Phänomene und Aufpassen auf die Schüler."
+            title: 'Aufseher',
+            subtitle: 'Grundschule Bochum Westenfeld',
+            time: '04/2013 - 02/2014',
+            text: 'Mitleitung der Technik AG, in der Grundschülern die Welt der Technik näher gebracht werden soll. Dabei vor allem Helfen beim Durchführen von Experimenten, Erklären auftretender naturwissenschaftlicher Phänomene und Aufpassen auf die Schüler.'
           },
           {
             id: 4,
-            title: "Eis- & Bierverkäufer",
-            subtitle: "Edmund Goebgens Stadion- und Veranstaltungsservice GmbH",
-            time: "03/2012 - 06/2012",
-            text: "Verkauf von Eis und Bier in Stadien wie der Veltins Arena in Gelsenkirchen oder der Lanxess Arena in Köln. Dabei hauptsächlich im Umgang mit einem Bauchladen zwischen den Sitzreihen."
+            title: 'Eis- & Bierverkäufer',
+            subtitle: 'Edmund Goebgens Stadion- und Veranstaltungsservice GmbH',
+            time: '03/2012 - 06/2012',
+            text: 'Verkauf von Eis und Bier in Stadien wie der Veltins Arena in Gelsenkirchen oder der Lanxess Arena in Köln. Dabei hauptsächlich im Umgang mit einem Bauchladen zwischen den Sitzreihen.'
           },
           {
             id: 5,
-            title: "Praktikum im Bereich IT",
-            subtitle: "Faber Datentechnik",
-            time: "11/2011 - 11/2011",
-            text: "Zweiwöchiges Praktikum im Bereich Hardware. Dabei vor allem Montage von Installation von Computern. Dazu auch kleine Reparaturarbeiten und Fehleranalysen."
+            title: 'Praktikum im Bereich IT',
+            subtitle: 'Faber Datentechnik',
+            time: '11/2011 - 11/2011',
+            text: 'Zweiwöchiges Praktikum im Bereich Hardware. Dabei vor allem Montage von Installation von Computern. Dazu auch kleine Reparaturarbeiten und Fehleranalysen.'
           },
           {
             id: 6,
-            title: "Praktikum im Bereich IT",
-            subtitle: "DOGEWO21, Dortmund",
-            time: "02/2010 - 02/2010",
-            text: "Einwöchiges Praktikum im Bereich Software. In erster Linie das Erstellen von Exceltabellen und die Unterstützung des IT-Supports vor Ort."
-          },
+            title: 'Praktikum im Bereich IT',
+            subtitle: 'DOGEWO21, Dortmund',
+            time: '02/2010 - 02/2010',
+            text: 'Einwöchiges Praktikum im Bereich Software. In erster Linie das Erstellen von Exceltabellen und die Unterstützung des IT-Supports vor Ort.'
+          }
         ],
         education: [
           {
             id: 1,
-            title: "Bachelor of Science (B.Sc.), Wirtschaftsinformatik",
-            subtitle: "Universität Duisburg-Essen, Standort Essen",
-            time: "10/2014 - 02/2017",
+            title: 'Bachelor of Science (B.Sc.), Wirtschaftsinformatik',
+            subtitle: 'Universität Duisburg-Essen, Standort Essen',
+            time: '10/2014 - 02/2017'
           },
           {
             id: 2,
-            title: "Abitur",
-            subtitle: "Hellwegschule, Bochum",
-            time: "02/2010 - 05/2014",
+            title: 'Abitur',
+            subtitle: 'Hellwegschule, Bochum',
+            time: '02/2010 - 05/2014',
             text: `Prüfungsfächer:
                     <ul class="colto">
                     <li>Sozialwissenschaften LK</li>
@@ -255,75 +255,71 @@
           },
           {
             id: 3,
-            title: "Gymnasium",
-            subtitle: "Internatsschule Schloss Neubeuern, Bayern",
-            time: "09/2005 - 02/2010",
-          },
+            title: 'Gymnasium',
+            subtitle: 'Internatsschule Schloss Neubeuern, Bayern',
+            time: '09/2005 - 02/2010'
+          }
         ]
       }
     },
-    beforeCreate() {
+    beforeCreate () {
       if (localStorage.getItem('color')) {
         basecolor = Color(localStorage.getItem('color'))
-      }
-      else {
+      } else {
         basecolor = Color.hsl([120, 33, 34])
       }
       if (localStorage.getItem('right')) {
-        rightBool = (localStorage.getItem('right') === "true")
-      }
-      else {
+        rightBool = (localStorage.getItem('right') === 'true')
+      } else {
         rightBool = true
       }
-      console.log("create - " + basecolor)
+      console.log('create - ' + basecolor)
       window.onbeforeunload = () => {
-        console.log("destroy - " + this.color.hex)
+        console.log('destroy - ' + this.color.hex)
         localStorage.setItem('color', this.color.hex)
         localStorage.setItem('right', this.right)
       }
     },
-    beforeDestroy() {
-      console.log("destroy - " + this.color.hex)
+    beforeDestroy () {
+      console.log('destroy - ' + this.color.hex)
       localStorage.setItem('color', this.color.hex)
       localStorage.setItem('right', this.right)
     },
     computed: {
       compBasecolor: function () {
-        [].slice.call(document.getElementsByTagName("a")).forEach((elem) => {
+        [].slice.call(document.getElementsByTagName('a')).forEach((elem) => {
           elem.style.color = Color(this.color.hex).lighten(0.7).saturate(1).string()
         });
-        [].slice.call(document.querySelectorAll("i.circular.icon")).forEach((elem) => {
-          elem.style.color = Color(this.color.hex).darken(0.3).string();
-          elem.style.borderColor = Color(this.color.hex).darken(0.3).string();
+        [].slice.call(document.querySelectorAll('i.circular.icon')).forEach((elem) => {
+          elem.style.color = Color(this.color.hex).darken(0.3).string()
+          elem.style.borderColor = Color(this.color.hex).darken(0.3).string()
         })
         return Color(this.color.hex)
-      },
+      }
     },
-    mounted() {
-      [].slice.call(document.getElementsByTagName("a")).forEach((elem) => {
+    mounted () {
+      [].slice.call(document.getElementsByTagName('a')).forEach((elem) => {
         elem.style.color = Color(this.color.hex).lighten(0.7).saturate(1).string()
       });
-      [].slice.call(document.querySelectorAll("i.circular.icon")).forEach((elem) => {
-        elem.style.color = Color(this.color.hex).darken(0.3).string();
-        elem.style.borderColor = Color(this.color.hex).darken(0.3).string();
+      [].slice.call(document.querySelectorAll('i.circular.icon')).forEach((elem) => {
+        elem.style.color = Color(this.color.hex).darken(0.3).string()
+        elem.style.borderColor = Color(this.color.hex).darken(0.3).string()
       })
     },
     methods: {
-        setBaseColor: function () {
-            let c = Color.hsl([120, 33, 34])
-            this.color =  {
-            hex: c.hex(),
-              hsl: c.hsl().object(),
-              hsv: c.hsv().object(),
-              rgba: c.rgb().object(),
-              a: 1
-          }
-
+      setBaseColor: function () {
+        let c = Color.hsl([120, 33, 34])
+        this.color = {
+          hex: c.hex(),
+          hsl: c.hsl().object(),
+          hsv: c.hsv().object(),
+          rgba: c.rgb().object(),
+          a: 1
         }
+      }
     }
 
   }
-
 
 </script>
 
@@ -474,4 +470,3 @@
       font-size: 0.9em
 
 </style>
-

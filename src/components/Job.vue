@@ -13,11 +13,11 @@
 <script>
 export default {
   name: 'job',
-  props: ['title','subtitle','time','text','color'],
+  props: ['title', 'subtitle', 'time', 'text', 'color'],
   data () {
-      return {
-          collapse: false,
-      }
+    return {
+      collapse: false
+    }
   }
 }
 </script>
@@ -26,7 +26,7 @@ export default {
 <style scoped lang="sass">
   h3
     margin-bottom: 5px !important
-    margin-top: 0px !important
+    margin-top: 0 !important
   .job
     border-left: solid 1px
     padding-bottom: 20px
