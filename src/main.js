@@ -6,7 +6,7 @@ import 'semantic-ui-css/semantic.min.css'
 import Icon from 'vue-svg-icon/Icon.vue'
 import { Slider } from 'vue-color'
 import router from './router'
-
+import store from './store'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -16,6 +16,7 @@ Vue.component('slider-picker', Slider)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   template: '<App/>',
   router,
   components: { App,

@@ -1,7 +1,7 @@
 <template>
-  <div class="job" :style="{'border-color': color.string()}" >
-    <span class="before" :style="{background: color.string()}"></span>
-    <h3 :style="{color: color.string()}" @click="collapse = !collapse">{{title}}</h3>
+  <div class="job" :style="{'border-color': color}" >
+    <span class="before" :style="{background: color}"></span>
+    <h3 :style="{color: color}" @click="collapse = !collapse">{{title}}</h3>
     <div class="info bold italic">
       <span>{{subtitle}}</span>
       <span style="white-space: nowrap">{{time}}</span>
@@ -49,7 +49,20 @@ export default {
     .italic
       font-style: italic
   @media print
-    .job .before
-      border-color: white
+    .job
+      page-break-inside: avoid
+      .before
+        border-color: white !important
+    #app:not(.development)
+      .job
+        border-color: #4a4a4a !important
+        .before
+          border-color: white !important
+          background: #4A4A4A !important
+        h3
+          color: black !important
+        .info
+          color: #4A4A4A !important
+
 
 </style>

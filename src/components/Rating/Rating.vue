@@ -4,13 +4,13 @@
           :name="iconname"
           scale="1.6"
           style="color: #eee;"
-          :key="n">
+          :key="n" class="plus">
 
     </icon>
     <icon v-for="n in (5 - count)"
           :name="iconname" scale="1.6"
-          :style="{color: color.darken(0.2).string()}"
-          :key="n">
+          :style="{color: color}"
+          :key="n" class="minus">
 
     </icon>
   </div>
@@ -30,4 +30,11 @@ export default {
       margin-left: 2px
     .svg-icon
       margin-right: 3px
+  @media print
+    #app:not(.development)
+      .rating
+        .plus
+          color: black !important
+        .minus
+          color: darkgray !important
 </style>
