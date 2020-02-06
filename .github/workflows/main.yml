@@ -22,7 +22,7 @@ jobs:
     - name: Deploy
       uses: s0/git-publish-subdir-action@master
       env:
-        REPO: git@github.com:owner/repo.git
+        REPO: self
         BRANCH: gh-pages
         FOLDER: dist
         SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
