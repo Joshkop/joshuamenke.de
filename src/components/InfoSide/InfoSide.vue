@@ -1,6 +1,5 @@
 <template>
   <div id="left" :style="{background: getColor}">
-
     <a href="/" class="centered" :style="{color: getLinkColor}" >
       <span class="before" :style="{background: getDarkerColor}"></span>
       <h1>{{infos.personal.name}}</h1>
@@ -31,7 +30,7 @@
         <i class="mail circular icon" :style='{color: getDarkerColor, borderColor: getColor}'></i>
         <a :href="'mailto:'+ infos.personal.email" :style="{color: getLinkColor}">{{ infos.personal.email }}</a>
       </div>
-      <div class="info">
+      <div class="info" id="website">
         <i class="browser circular icon" :style='{color: getDarkerColor, borderColor: getColor}'></i>
         <a :href="'http://' +  infos.personal.website " :style="{color: getLinkColor}">{{ infos.personal.website }}</a>
       </div>
@@ -48,7 +47,7 @@
         <span><b>{{ language.name }}</b></span>
         <span>{{ language.competence }}</span>
     </div>
-
+    </div>
     <div class="segment" id="kenntnisse">
       <div class="subtitle">
         <div class="ui divider"></div>
@@ -74,7 +73,7 @@
         <b>{{hobby.name}}</b>
       </div>
     </div>
-    <div class="page-break"></div>
+    <!--<div class="page-break"></div>-->
 
     <div class="segment" id="links">
       <div>
@@ -88,7 +87,7 @@
       </div>
     </div>
     </div>
-  </div>
+
 </template>
 <script>
   import Rating from '@/components/Rating/Rating'
@@ -109,6 +108,7 @@
   }
 </script>
 <style lang="sass" scoped="">
+
   .print
     display: none
   #personal
@@ -118,7 +118,7 @@
   #left
     padding: 30px
     color: #eee
-    min-height: 100%
+    /*min-0 100%*/
 
     .ui.divider
       border-color: #EEEEEE
@@ -153,8 +153,11 @@
           left: -30px
           top: -30px
   @media print
+    .segment
+      page-break-inside: avoid
     #app:not(.development)
       #left
+        height: 100% !important
         #personal
           padding-top: 0
         .print
@@ -173,4 +176,6 @@
           border-color: #292929 !important
         .ui.divider
           border-color: #292929 !important
+  /*#website*/
+    /*display: none*/
 </style>

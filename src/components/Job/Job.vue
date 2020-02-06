@@ -1,7 +1,7 @@
 <template>
   <div class="job" :style="{'border-color': color}" >
     <span class="before" :style="{background: color}"></span>
-    <h3 :style="{color: color}" @click="collapse = !collapse">{{title}}</h3>
+    <h3>{{title}}</h3>
     <div class="info bold italic">
       <span>{{subtitle}}</span>
       <span style="white-space: nowrap">{{time}}</span>
