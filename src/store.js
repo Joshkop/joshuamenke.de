@@ -247,7 +247,7 @@ const store = new Vuex.Store({
                   show: true,
                   name: "Ausbildung zum Kaufmann im Einzelhandel",
                   institution: "Louis-Baare-Berufskolleg; IHK Bochum",
-                  time: "09/2017 - 01/2020",
+                  time: "09/2018 - 01/2020",
                   text: `Abschlussnoten:
                       <ul>
                         <li>Berufsschule: 1,9</li>
