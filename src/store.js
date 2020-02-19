@@ -184,7 +184,7 @@ const store = new Vuex.Store({
                 },
                 {
                   id: 4,
-                  show: true,
+                  show: false,
                   name: "Imbissverkäufer",
                   institution: "Bratwursthaus GmbH & Co. KG",
                   time: "08/2015 - 01/2017",
