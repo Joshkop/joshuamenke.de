@@ -7,7 +7,7 @@ This should highlight my current experience in web development with JavaScript, 
 
 While building the code for production works right now:
 
-Just pull this repository and run  
+Just clone this repository and run  
 ```bash
 cd joshuamenke.de
 npm install
